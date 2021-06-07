@@ -3,9 +3,9 @@ import { Redirect, Route, Switch } from 'react-router-dom'
 import { useContext, Suspense, lazy } from 'react';
 import AuthContext from './store/AuthContext'
 import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner';
+import SideBar from './components/UI/Sidebar/Sidebar';
 require('dotenv').config()
 const InvoicePage = lazy(() => import('./pages/InvoicePage'));
-const SideBar = lazy(() => import('./components/UI/Sidebar/Sidebar'));
 const UserPage = lazy(() => import('./pages/UserPage'))
 const LoginPage = lazy(() => import('./pages/LoginPage'))
 const HomePage = lazy(() => import('./pages/HomePage'))
@@ -13,10 +13,10 @@ function App() {
   const ctx = useContext(AuthContext);
   return (
     <>
+      {ctx.token && <SideBar />}
       <Suspense fallback={<div className={classes.centeredDiv}>
         <LoadingSpinner />
       </div>}>
-        {ctx.token && <SideBar />}
         <Switch>
           <Route path="/" exact>
             {ctx.token && ctx.isValid() ? <Redirect to="/home" /> : <LoginPage />}
