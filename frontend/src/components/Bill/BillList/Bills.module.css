@@ -1,0 +1,131 @@
+.home-header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.header-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 7px;
+}
+.filter {
+  position: relative;
+  border-radius: 5px 5px 0px 0px;
+  display: inline-block;
+  width: 160px;
+  font-weight: 600;
+}
+
+.filters {
+  display: none;
+  position: absolute;
+  background-color: rgb(19, 14, 36);
+  border-radius: 0px 0px 5px 5px;
+  width: 160px;
+  z-index: 1;
+  transition: all 200ms ease-out;
+}
+.filter a:nth-child(4) {
+  border-radius: 0px 0px 5px 5px;
+}
+.filters a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.filter:hover .filters {
+  transition: all 200ms ease-out;
+  display: block;
+}
+.filter:hover a:hover {
+  background-color: rgb(53, 39, 99);
+  transition: background-color 100ms ease-in;
+}
+.filter:hover {
+  background-color: rgb(19, 14, 36);
+}
+.filterBtn {
+  background-color: #4caf4f00;
+  color: white;
+  padding: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.open {
+  padding: 0 !important;
+}
+.add {
+  background-color: white;
+  color: rgb(124, 94, 249);
+  border-radius: 50%;
+  width: 34px;
+  height: 33px;
+  display: flex;
+  font-size: 25px;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+}
+.Create {
+  width: 138px;
+  font-weight: 600;
+  border-radius: 50px;
+  color: white;
+  background-color: rgb(124, 94, 249);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 44px;
+}
+
+.invoiceCt h1 {
+  margin-top: 0;
+  margin-bottom: 2px;
+}
+.invoiceCt p {
+  color: rgb(172, 172, 172);
+  margin-top: 2px;
+}
+.overlay-enter {
+  width: 0%;
+}
+.overlay-enter-active {
+  width: 50%;
+  transition: width 300ms ease-in;
+}
+.overlay-exit-active {
+  width: 0%;
+  transition: width 300ms ease-in;
+}
+.overlay-exit {
+  width: 0%;
+}
+.home-main {
+  overflow-y: scroll;
+}
+@media (max-width: 697px) {
+  .filter {
+    width: 100px;
+  }
+  .filters {
+    width: 100px;
+  }
+  .Create {
+    width: 82px;
+    padding-right: 7px;
+  }
+  .invoiceCt {
+    font-size: 13px;
+  }
+}
+@media (max-width: 300px) {
+  .header-actions {
+    flex-direction: column-reverse;
+  }
+}

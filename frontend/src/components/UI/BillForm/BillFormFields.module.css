@@ -1,0 +1,116 @@
+.formFields {
+  padding: 0 26px;
+  font-weight: 600;
+  overflow-y: auto;
+  max-height: calc(100vh - 173px);
+  padding-bottom: 20px;
+  overflow-x: auto;
+}
+.formFields select {
+  background-color: rgb(31, 33, 58);
+  color: white;
+  height: 45px;
+  width: 100%;
+  border-radius: 5px;
+  border: 0px;
+  padding: 0px 5px;
+  font-family: "Poppins", sans-serif;
+  transition: filter 200ms ease-out;
+}
+
+.formFields input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.formFields input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.formFields select:focus,
+.formFields select:hover {
+  outline: none;
+  filter: brightness(150%);
+}
+
+.headings {
+  color: rgb(124, 94, 249);
+}
+.address-country {
+  display: grid;
+  grid-template-columns: 62% 34%;
+  column-gap: 16px;
+}
+.address-country > :nth-child(1) {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  column-gap: 16px;
+}
+.formFields label {
+  color: rgb(172, 172, 172) !important;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+}
+.dateAndTerms {
+  display: grid;
+  grid-template-columns: 49% 49%;
+  column-gap: 10px;
+}
+.items {
+  display: grid;
+  grid-template-columns: 32% 9% 19% 21% 6%;
+  align-items: center;
+  column-gap: 15px;
+  row-gap: 10px;
+}
+.items > * {
+  justify-self: start;
+}
+.items p {
+  color: rgb(172, 172, 172);
+  max-width: 125px;
+}
+.addMoreItems {
+  margin-top: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.trash {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+}
+.trash img {
+  width: 20px;
+  height: 20px;
+}
+.invalid {
+  background-color: rgb(94, 30, 30);
+}
+@media (max-width: 700px) {
+  .address-country {
+    display: flex;
+    flex-direction: column;
+  }
+  .address-country > :nth-child(1) {
+    grid-template-columns: 47% 47%;
+  }
+  .items {
+    grid-template-columns: 28% 9% 19% 19% 6%;
+  }
+  .dateAndTerms {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 300px) {
+  .items {
+    grid-template-columns: 25% 9% 15% 15% 5%;
+  }
+  .formFields {
+    padding: 0 12px;
+  }
+}

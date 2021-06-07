@@ -1,0 +1,105 @@
+.invoice-header,
+.status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.invoice-header {
+  background-color: rgb(31, 33, 58);
+  border-radius: 7px;
+  padding: 15px 40px;
+  margin-top: 28px;
+}
+.lds-ellipsis div {
+  background-color: rgb(84, 60, 139);
+}
+.home-link {
+  text-decoration: none;
+  color: lightgray;
+  font-weight: 700;
+}
+.home-link span {
+  color: rgb(124, 94, 249);
+}
+.edit {
+  margin-right: 10px;
+}
+.delete {
+  background-color: rgb(232, 88, 91);
+  margin-right: 10px;
+}
+.markAsPaid {
+  background-color: rgb(124, 94, 249);
+}
+.main {
+  background-color: rgb(31, 33, 58);
+  border-radius: 7px;
+  padding: 55px 60px;
+  margin-top: 28px;
+}
+.main h2,
+h3,
+h1 {
+  color: white;
+}
+.main h2 {
+  margin-top: 4px;
+}
+.main p {
+  color: rgb(172, 172, 172);
+  margin-bottom: 4px;
+}
+.invoice-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 345px;
+}
+.status {
+  color: lightgrey;
+  width: 170px;
+}
+.state {
+  padding: 9px 12px;
+  width: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 7px;
+}
+
+.state p {
+  margin: 0;
+}
+.Pending {
+  background-color: rgba(255, 166, 0, 0.082);
+  color: orange;
+}
+.Paid {
+  background-color: rgba(1, 194, 114, 0.082);
+  color: rgb(1, 194, 114);
+}
+.Draft {
+  background-color: rgba(255, 255, 255, 0.082);
+  color: white;
+}
+@media (max-width: 700px) {
+  .invoice-header {
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 15px 20px;
+  }
+  .invoice-header > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .main {
+    font-size: 12px;
+    padding: 25px 31px;
+  }
+}
+@media (max-width: 400px) {
+  .main {
+    padding: 25px 25px;
+  }
+}

@@ -1,0 +1,23 @@
+.input {
+  background-color: rgb(31, 33, 58);
+  color: white;
+  height: 45px;
+  border-radius: 5px;
+  border: 0px;
+  width: 98%;
+  padding: 0px 5px;
+  font-family: "Poppins", sans-serif;
+  transition: filter 200ms ease-out;
+}
+.input:focus,
+.input:hover {
+  outline: none;
+  filter: brightness(150%);
+}
+.invalid {
+  background-color: rgb(94, 30, 30);
+}
+.input:read-only {
+  background-color: rgb(22, 23, 41);
+  color: rgb(100, 99, 100);
+}

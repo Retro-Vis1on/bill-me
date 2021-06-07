@@ -1,0 +1,121 @@
+.formAndBanner {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 65% 28%;
+  height: 80vh;
+  width: 100%;
+}
+.banner {
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.banner div h2 {
+  color: rgb(90, 65, 192) !important;
+}
+.formControl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner div h3 {
+  font-size: 60px;
+  margin-bottom: 20px !important;
+  margin-left: 10px !important;
+}
+.form {
+  height: 450px;
+  margin-top: 40px !important;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: rgb(214, 214, 214);
+  background-color: rgb(24, 26, 44);
+  border-left: 1px solid rgb(124, 94, 249);
+  border-right: 1px solid rgb(124, 94, 249);
+}
+.form label {
+  display: block;
+  margin: 5px 0px;
+}
+.form h2 {
+  text-align: center;
+}
+.banner h2,
+.banner h3,
+.banner h4 {
+  margin: 0 !important;
+  color: rgb(202, 202, 202);
+}
+.banner div {
+  display: flex;
+  align-items: flex-end;
+}
+.button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 5px 20px;
+  transition: all 200ms ease-out;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+.button:hover {
+  background-color: rgba(163, 142, 248, 0.397);
+  border-bottom: 3px solid rgb(124, 94, 249);
+}
+.active {
+  border-bottom: 3px solid rgb(124, 94, 249);
+}
+.cards {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  column-gap: 2%;
+  justify-content: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+@media (max-width: 1024px) {
+  .formAndBanner {
+    grid-template-columns: 80%;
+    justify-content: center;
+    height: 1100px;
+  }
+}
+
+@media (max-width: 570px) {
+  .banner {
+    transform: scale(0.8);
+  }
+  .formAndBanner {
+    height: 1100px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 720px) {
+  .formAndBanner {
+    height: 1200px;
+  }
+}
+@media (max-width: 410px) {
+  .banner {
+    transform: scale(0.67);
+  }
+  .form {
+    height: 490px;
+  }
+  .cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}

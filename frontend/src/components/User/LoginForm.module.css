@@ -1,0 +1,23 @@
+.form {
+  animation: formIn 3s forwards;
+}
+.button {
+  margin-top: 10px;
+}
+@keyframes formIN {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+.formActions {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  column-gap: 7%;
+  align-items: center;
+}

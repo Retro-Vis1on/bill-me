@@ -1,0 +1,119 @@
+.formOverlay {
+  position: fixed;
+  z-index: 201;
+  background-color: rgb(20, 22, 37);
+  margin-left: 92px;
+  max-height: 100vh;
+  width: 0%;
+  animation: openForm 200ms ease-out forwards;
+}
+.formOverlay h1 {
+  padding: 26px 26px;
+  margin: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 100px);
+  max-width: 100%;
+}
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: rgb(32, 36, 59);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.form-submit-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.discard {
+  background-color: white;
+  color: rgb(124, 94, 249);
+}
+.save {
+  background-color: rgb(124, 94, 249);
+  margin-left: 5px;
+}
+.closeForm {
+  animation: onClose 200ms ease-out forwards;
+}
+@keyframes onClose {
+  0% {
+    width: 55%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes onCloseTablet {
+  0% {
+    width: 65%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@keyframes onCloseMobile {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+@media (max-width: 1024px) {
+  .formOverlay {
+    margin-left: 0;
+    margin-top: 92px;
+    animation: openFormTablet 200ms ease-out forwards;
+  }
+  .form {
+    max-height: calc(100vh - 192px);
+  }
+  .closeForm {
+    animation: onCloseTablet 200ms ease-out forwards;
+  }
+}
+@media (max-width: 400px) {
+  .form button {
+    font-size: 11px;
+    padding: 12.5px;
+  }
+}
+@media (max-width: 690px) {
+  .formOverlay {
+    animation: openFormMobile 200ms ease-out forwards;
+  }
+  .closeForm {
+    animation: onCloseMobile 200ms ease-out forwards;
+  }
+}
+@keyframes openForm {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 55%;
+  }
+}
+@keyframes openFormTablet {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 65%;
+  }
+}
+@keyframes openFormMobile {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}

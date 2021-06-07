@@ -1,0 +1,19 @@
+.home-link {
+  text-decoration: none;
+  color: lightgray;
+  font-weight: 700;
+}
+.home-link span {
+  color: rgb(124, 94, 249);
+}
+.message {
+  margin-top: 35px;
+  padding: 25px 45px;
+  border-radius: 7px;
+  background-color: rgb(37, 41, 70);
+}
+.message h2 {
+  text-align: center;
+  margin: 0;
+  color: white;
+}

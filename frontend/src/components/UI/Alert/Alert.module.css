@@ -1,0 +1,18 @@
+.alert {
+  position: fixed;
+  font-size: 16px;
+  color: white;
+  padding: 18px 32px;
+  z-index: 1000;
+  border-radius: 7px;
+  border-left: 2px solid rgb(124, 94, 249);
+  border-right: 2px solid rgb(124, 94, 249);
+  background-color: rgb(37, 41, 70);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.alert button {
+  background-color: rgb(124, 94, 249);
+  z-index: 1000;
+}

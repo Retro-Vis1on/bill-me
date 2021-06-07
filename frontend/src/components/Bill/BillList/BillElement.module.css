@@ -1,0 +1,72 @@
+.content a {
+  text-decoration: none;
+  display: grid;
+  grid-template-columns: 14% 20% 32% 15% 17% 2%;
+  padding: 15px 40px;
+  margin-bottom: 18px;
+  color: rgb(172, 172, 172);
+  align-items: center;
+  font-weight: 600;
+  transition: filter 200ms ease-out;
+}
+.content a * {
+  width: 100%;
+}
+.content h2,
+.content h3,
+.content h1 {
+  color: white;
+  font-weight: 600;
+}
+.content {
+  background-color: rgb(31, 33, 58);
+  border-radius: 7px;
+}
+.content :hover {
+  filter: brightness(150%);
+}
+.state {
+  padding: 9px 12px;
+  width: 80px !important;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 7px;
+}
+.state p {
+  margin: 0;
+}
+.Pending {
+  background-color: rgba(255, 166, 0, 0.082);
+  color: orange;
+}
+.Paid {
+  background-color: rgba(1, 194, 114, 0.082);
+  color: rgb(1, 194, 114) !important;
+}
+.Draft {
+  background-color: rgba(255, 255, 255, 0.082);
+  color: white;
+}
+.arrow {
+  color: rgb(124, 94, 249);
+  font-weight: 800;
+  font-size: large;
+}
+.project p {
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .content a {
+    grid-template-columns: 50% 50%;
+    padding: 23px 32px;
+    padding-top: 3%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .state {
+    margin-left: auto;
+  }
+}
