@@ -2,7 +2,7 @@
 
 This is an invoice management app.\
 Tech Stack: MERN\
-Deployed Link: https://60bdfffa39d4de000961eb32--cocky-austin-297416.netlify.app/
+Deployed Link: https://cocky-austin-297416.netlify.app
 
 ## Associated Dependencies Docs:
 
