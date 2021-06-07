@@ -1,5 +1,4 @@
 import classes from "./Profile.module.css"
-import Button from "../UI/Button/Button"
 import { Doughnut } from 'react-chartjs-2'
 const Profile = (props) => {
     return <>
@@ -10,7 +9,6 @@ const Profile = (props) => {
                     <div className={classes.profilePic}>
                         <img src={props.data.profilePic} alt="profilPic" />
                     </div>
-                    {/* <Button>Change Profile Pic</Button> */}
                 </div>
                 <div className={classes.info}>
                     <p>Username</p>

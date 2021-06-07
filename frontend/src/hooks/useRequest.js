@@ -1,6 +1,5 @@
 import { useCallback, useState } from "react"
 const url = process.env.REACT_APP_BACKEND_URL ? process.env.REACT_APP_BACKEND_URL : 'http://localhost:8000/graphql'
-// const url = 'http://localhost:8000/graphql'
 const useRequest = () => {
     const [error, errorUpdater] = useState(null)
     const sendRequest = useCallback(async (config) => {
