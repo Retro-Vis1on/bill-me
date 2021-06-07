@@ -13,7 +13,7 @@ function App() {
   const ctx = useContext(AuthContext);
   return (
     <>
-      <Suspense fallback={<div style={classes.divStyle}>
+      <Suspense fallback={<div style={classes.centeredDiv}>
         <LoadingSpinner />
       </div>}>
         {ctx.token && <SideBar />}
