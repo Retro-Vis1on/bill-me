@@ -1,23 +1,21 @@
-import { Redirect, Route, Switch } from 'react-router-dom'
-import React, { useContext, Suspense } from 'react';
-import AuthContext from './store/AuthContext';
-import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner';
 import classes from './App.module.css';
+import { Redirect, Route, Switch } from 'react-router-dom'
+import { useContext, Suspense, lazy } from 'react';
+import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner';
 require('dotenv').config()
-const LoginPage = React.lazy(() => import('./pages/LoginPage'))
-const UserPage = React.lazy(() => import('./pages/UserPage'))
-const InvoicePage = React.lazy(() => import('./pages/InvoicePage'))
-const SideBar = React.lazy(() => import('./components/UI/Sidebar/Sidebar'))
-const HomePage = React.lazy(() => import('./pages/HomePage'))
+const InvoicePage = lazy(() => import('./pages/InvoicePage'));
+const SideBar = lazy(() => import('./components/UI/Sidebar/Sidebar'));
+const AuthContext = lazy(() => import('./store/AuthContext'))
+const UserPage = lazy(() => import('./pages/UserPage'))
+const LoginPage = lazy(() => import('./pages/LoginPage'))
+const HomePage = lazy(() => import('./pages/HomePage'))
 function App() {
   const ctx = useContext(AuthContext);
   return (
     <>
-      <Suspense fallback={
-        <div className={classes.centered}>
-          <LoadingSpinner />
-        </div>
-      }>
+      <Suspense fallback={<div style={classes.divStyle}>
+        <LoadingSpinner />
+      </div>}>
         {ctx.token && <SideBar />}
         <Switch>
           <Route path="/" exact>

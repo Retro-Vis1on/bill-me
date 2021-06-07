@@ -1,3 +1,4 @@
+import Container from '../../UI/Container/Container'
 import { useCallback, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useContext, useEffect, } from "react"
@@ -6,7 +7,6 @@ import classes from './Bills.module.css'
 import useRequest from "../../../hooks/useRequest"
 import AuthContext from '../../../store/AuthContext'
 import LoadingSpinner from '../../UI/LoadingSpinner/LoadingSpinner'
-import Container from '../../UI/Container/Container'
 import Button from '../../UI/Button/Button'
 import BillFormOverlay from '../../UI/BillForm/BillFormOverlay'
 import { billsList } from '../../../helpers/graphQLBody'
