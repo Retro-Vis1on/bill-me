@@ -6,7 +6,7 @@ const auth = require('./middleware/isAuth')
 require('dotenv').config()
 const schema = require('./graphql/schema/index')
 const resolver = require('./graphql/resolvers/Index')
-const port = process.env.PORT
+const port = process.env.PORT ? process.env.PORT : 8000
 const { errorTypes } = require('./helpers/Error')
 const cors = require('./middleware/corsPolicy')
 const mongoSanitize = require('express-mongo-sanitize');
