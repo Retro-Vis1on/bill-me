@@ -9,7 +9,7 @@ import LoadingSpinner from '../../UI/LoadingSpinner/LoadingSpinner'
 import Container from '../../UI/Container/Container'
 import Button from '../../UI/Button/Button'
 import BillFormOverlay from '../../UI/BillForm/BillFormOverlay'
-import { billList } from '../../../helpers/graphQLBody'
+import { billsList } from '../../../helpers/graphQLBody'
 import useWindowDimensions from '../../../hooks/useWindowDimensions'
 import Error from '../../UI/ErrorMessage/Error'
 const Bills = () => {
@@ -23,7 +23,7 @@ const Bills = () => {
     const loader = useRef(null)
     const getBills = useCallback(async (firstIndex = 0) => {
         loadingStateUpdater(true)
-        const requestBody = billList({ firstIndex })
+        const requestBody = billsList({ firstIndex })
         const config = { body: requestBody, headers: { 'Content-Type': 'application/json', 'Authorization': `${ctx.token}` } }
         const response = await sendRequest(config);
         loadingStateUpdater(false)

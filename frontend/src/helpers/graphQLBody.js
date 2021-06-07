@@ -220,13 +220,22 @@ const updateBill = (sender, reciever, project, items, id) => {
 
 }
 
-module.exports.payBill = payBill
-module.exports.deleteBill = deleteBill
-module.exports.signUp = signUp
-module.exports.login = login
-module.exports.indivisualBill = indivisualBill
-module.exports.billList = billList
-module.exports.createBill = createBill
-module.exports.updateBill = updateBill
-module.exports.getProfilePic = getProfilePic
-module.exports.getProfile = getProfile
+const _payBill = payBill
+export { _payBill as payBill }
+const _deleteBill = deleteBill
+export { _deleteBill as deleteBill }
+const _signUp = signUp
+export { _signUp as signUp }
+const _login = login
+export { _login as login }
+const _indivisualBill = indivisualBill
+export { _indivisualBill as indivisualBill }
+export const billsList = billList
+const _createBill = createBill
+export { _createBill as createBill }
+const _updateBill = updateBill
+export { _updateBill as updateBill }
+const _getProfilePic = getProfilePic
+export { _getProfilePic as getProfilePic }
+const _getProfile = getProfile
+export { _getProfile as getProfile }

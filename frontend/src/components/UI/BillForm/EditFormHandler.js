@@ -1,6 +1,6 @@
-const keyGen = require("../../../helpers/itemKeyGen")
-
-module.exports = (data, senderDisptacher, recieverDispatcher, projectDispatcher, itemsStateUpdater) => {
+// const keyGen = require("../../../helpers/itemKeyGen").default
+import keyGen from '../../../helpers/itemKeyGen'
+const EditFormHandler = (data, senderDisptacher, recieverDispatcher, projectDispatcher, itemsStateUpdater) => {
     for (let field in data.senderAddress) {
         const val = data.senderAddress[field]
         senderDisptacher({ value: val, field: field, type: "update" })
@@ -30,3 +30,4 @@ module.exports = (data, senderDisptacher, recieverDispatcher, projectDispatcher,
     }
     itemsStateUpdater(itemsList);
 }
+export default EditFormHandler
