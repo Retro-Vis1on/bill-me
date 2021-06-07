@@ -1,11 +1,11 @@
 import classes from './App.module.css';
 import { Redirect, Route, Switch } from 'react-router-dom'
 import { useContext, Suspense, lazy } from 'react';
+import AuthContext from './store/AuthContext'
 import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner';
 require('dotenv').config()
 const InvoicePage = lazy(() => import('./pages/InvoicePage'));
 const SideBar = lazy(() => import('./components/UI/Sidebar/Sidebar'));
-const AuthContext = lazy(() => import('./store/AuthContext'))
 const UserPage = lazy(() => import('./pages/UserPage'))
 const LoginPage = lazy(() => import('./pages/LoginPage'))
 const HomePage = lazy(() => import('./pages/HomePage'))
