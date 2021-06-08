@@ -78,6 +78,9 @@
   margin-top: 20px;
   padding: 20px;
 }
+.cards h4 {
+  color: white;
+}
 @media (max-width: 1024px) {
   .formAndBanner {
     grid-template-columns: 80%;

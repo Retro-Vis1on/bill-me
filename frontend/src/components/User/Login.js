@@ -64,7 +64,7 @@ const Login = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum quis laboriosam officia velit! Iusto nobis id voluptatem eum nam!</p>
             </Card>
             <Card iconClass="fas fa-receipt">
-                <h4>Some heading I dunno</h4>
+                <h4>All Invoices,<br /> In One Place</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque rerum quis laboriosam officia velit! Iusto nobis id voluptatem eum nam!</p>
             </Card>
         </div>
