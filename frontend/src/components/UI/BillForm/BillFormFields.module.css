@@ -81,7 +81,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border: none;
   width: 20px;
   cursor: pointer;
-  height: 20px;
+  align-items: center;
 }
 .trash img {
   width: 20px;
@@ -99,7 +99,7 @@ input[type="number"]::-webkit-outer-spin-button {
     grid-template-columns: 47% 47%;
   }
   .items {
-    grid-template-columns: 28% 9% 19% 19% 6%;
+    grid-template-columns: 28% 9% 19% 19% 8%;
   }
   .dateAndTerms {
     display: flex;
@@ -108,7 +108,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 @media (max-width: 300px) {
   .items {
-    grid-template-columns: 25% 9% 15% 15% 5%;
+    grid-template-columns: 27% 9% 13% 15% 11%;
   }
   .formFields {
     padding: 0 12px;
