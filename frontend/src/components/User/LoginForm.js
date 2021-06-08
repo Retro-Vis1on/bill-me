@@ -45,7 +45,6 @@ const LoginForm = (props) => {
     const formSubmitHandler = async (e) => {
         sendingStateUpdater(true)
         e.preventDefault()
-        console.log(credentialsState)
         credentialsDispatcher({ type: "validate", field: "email" })
         credentialsDispatcher({ type: "validate", field: "password" })
         credentialsDispatcher({ type: "validate", field: "username" })
